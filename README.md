@@ -1,73 +1,190 @@
-# Welcome to your Lovable project
+# Seeker Nexus AI - AI-Powered Job Portal
 
-## Project info
+<div align="center">
 
-**URL**: https://lovable.dev/projects/e21b9d09-2cb9-4abf-b899-2eb8f75e0a38
+![AI Job Portal](https://img.shields.io/badge/AI-Powered-blue?style=for-the-badge)
+![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript)
+![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E?style=for-the-badge&logo=supabase)
 
-## How can I edit this code?
+*Connecting talent with opportunity through the power of Artificial Intelligence*
 
-There are several ways of editing your application.
+</div>
 
-**Use Lovable**
+## 📋 Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e21b9d09-2cb9-4abf-b899-2eb8f75e0a38) and start prompting.
+Seeker Nexus AI is a modern, AI-powered job portal that revolutionizes the way job seekers find opportunities and employers discover talent. Built with cutting-edge technologies, the platform features intelligent job matching, an AI career assistant, and seamless user experiences for both job seekers and employers.
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Key Features
 
-**Use your preferred IDE**
+### For Job Seekers
+- 🤖 **AI-Powered Job Matching** - Get personalized job recommendations based on your skills and experience
+- 💬 **AI Career Assistant** - Chat with an intelligent assistant for career advice and guidance
+- 🔍 **Advanced Job Search** - Filter and search for jobs by location, type, experience level, and more
+- 📊 **Application Tracking** - Monitor your job applications in one centralized dashboard
+- 📝 **Profile Management** - Create and manage a comprehensive professional profile
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### For Employers
+- 📢 **Job Posting** - Easy-to-use interface for posting job opportunities
+- 👥 **Candidate Management** - View and manage job applications efficiently
+- 🏢 **Company Profiles** - Showcase your company to attract top talent
+- 📈 **Application Analytics** - Track views and applications for your job postings
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Technology Stack
 
-Follow these steps:
+- **Frontend Framework**: React 18.3 with TypeScript
+- **Build Tool**: Vite 5.4
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Backend & Database**: Supabase (PostgreSQL)
+- **State Management**: TanStack Query (React Query)
+- **Routing**: React Router v6
+- **Form Handling**: React Hook Form + Zod validation
+- **UI Components**: Radix UI primitives
+- **Icons**: Lucide React
+- **Charts**: Recharts
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Getting Started
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Node.js 18+ and npm (or Bun)
+- Git
+- A Supabase account (for backend services)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Eminence-bit/seeker-nexus-ai.git
+   cd seeker-nexus-ai
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or if using Bun
+   bun install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root directory with your Supabase credentials:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_project_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Run database migrations**
+   
+   Use the Supabase CLI or dashboard to run the migrations in `supabase/migrations/`
+
+5. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   bun dev
+   ```
+
+6. **Open your browser**
+   
+   Navigate to `http://localhost:5173` (or the port shown in your terminal)
+
+## 🎯 Usage
+
+### Demo Credentials
+
+For testing purposes, you can create demo accounts or refer to `DEMO_CREDENTIALS.md` for sample data:
+
+**Employer Account:**
+- Email: `employer@demo.com`
+- Password: `demo123456`
+
+**Job Seeker Account:**
+- Email: `jobseeker@demo.com`
+- Password: `demo123456`
+
+### Main Routes
+
+- `/` - Landing page with feature overview
+- `/auth` - Login/Signup page
+- `/jobs` - Browse all job listings
+- `/jobs/:id` - Individual job details and application
+- `/dashboard` - User dashboard (Job Seeker or Employer view)
+- `/chat` - AI Career Assistant chat interface
+- `/about` - About the platform
+
+## 📁 Project Structure
+
+```
+seeker-nexus-ai/
+├── src/
+│   ├── components/       # Reusable UI components
+│   │   ├── ui/          # shadcn/ui components
+│   │   ├── dashboard/   # Dashboard-specific components
+│   │   └── Navbar.tsx   # Navigation component
+│   ├── pages/           # Page components (routes)
+│   ├── integrations/    # External service integrations
+│   │   └── supabase/    # Supabase client and types
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   └── assets/          # Static assets
+├── supabase/
+│   ├── migrations/      # Database migrations
+│   └── functions/       # Edge functions (AI chat, etc.)
+├── public/              # Public static files
+└── ...config files
 ```
 
-**Edit a file directly in GitHub**
+## 🔧 Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+```
 
-**Use GitHub Codespaces**
+## 🗄️ Database Schema
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application uses Supabase (PostgreSQL) with the following main tables:
 
-## What technologies are used for this project?
+- `profiles` - User profiles (job seekers & employers)
+- `jobs` - Job postings
+- `applications` - Job applications
+- `employer_profiles` - Extended employer information
+- `job_seeker_profiles` - Extended job seeker information
 
-This project is built with:
+## 🤝 Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## How can I deploy this project?
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Simply open [Lovable](https://lovable.dev/projects/e21b9d09-2cb9-4abf-b899-2eb8f75e0a38) and click on Share -> Publish.
+## 📝 License
 
-## Can I connect a custom domain to my Lovable project?
+This project is part of a learning/demo portfolio. Feel free to use it as inspiration for your own projects.
 
-Yes, you can!
+## 🙏 Acknowledgments
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Built with [Lovable](https://lovable.dev) - AI-powered development platform
+- UI components from [shadcn/ui](https://ui.shadcn.com)
+- Backend powered by [Supabase](https://supabase.com)
+- Icons by [Lucide](https://lucide.dev)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📧 Contact
+
+For questions or feedback, please open an issue in the GitHub repository.
+
+---
+
+<div align="center">
+
+**[View Live Demo](https://lovable.dev/projects/e21b9d09-2cb9-4abf-b899-2eb8f75e0a38)** | **[Report Bug](https://github.com/Eminence-bit/seeker-nexus-ai/issues)** | **[Request Feature](https://github.com/Eminence-bit/seeker-nexus-ai/issues)**
+
+Made with ❤️ and AI
+
+</div>
