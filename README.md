@@ -18,6 +18,7 @@ Seeker Nexus AI is a modern, AI-powered job portal that revolutionizes the way j
 ## ✨ Key Features
 
 ### For Job Seekers
+
 - 🤖 **AI-Powered Job Matching** - Get personalized job recommendations based on your skills and experience
 - 💬 **AI Career Assistant** - Chat with an intelligent assistant for career advice and guidance
 - 🔍 **Advanced Job Search** - Filter and search for jobs by location, type, experience level, and more
@@ -25,6 +26,7 @@ Seeker Nexus AI is a modern, AI-powered job portal that revolutionizes the way j
 - 📝 **Profile Management** - Create and manage a comprehensive professional profile
 
 ### For Employers
+
 - 📢 **Job Posting** - Easy-to-use interface for posting job opportunities
 - 👥 **Candidate Management** - View and manage job applications efficiently
 - 🏢 **Company Profiles** - Showcase your company to attract top talent
@@ -154,16 +156,6 @@ The application uses Supabase (PostgreSQL) with the following main tables:
 - `employer_profiles` - Extended employer information
 - `job_seeker_profiles` - Extended job seeker information
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 📝 License
 
 This project is part of a learning/demo portfolio. Feel free to use it as inspiration for your own projects.
@@ -183,8 +175,6 @@ For questions or feedback, please open an issue in the GitHub repository.
 
 <div align="center">
 
-**[View Live Demo](https://lovable.dev/projects/e21b9d09-2cb9-4abf-b899-2eb8f75e0a38)** | **[Report Bug](https://github.com/Eminence-bit/seeker-nexus-ai/issues)** | **[Request Feature](https://github.com/Eminence-bit/seeker-nexus-ai/issues)**
-
-Made with ❤️ and AI
+**[Report Bug](https://github.com/Eminence-bit/seeker-nexus-ai/issues)** | **[Request Feature](https://github.com/Eminence-bit/seeker-nexus-ai/issues)**
 
 </div>
