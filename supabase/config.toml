@@ -1,1 +1,4 @@
 project_id = "sbvvpskacqowjkpvmvuw"
+
+[functions.ai-career-chat]
+verify_jwt = false
