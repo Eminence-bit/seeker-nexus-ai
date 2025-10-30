@@ -17,6 +17,14 @@ Seeker Nexus AI is a modern, AI-powered job portal that revolutionizes the way j
 
 ## ✨ Key Features
 
+### 🧠 AI Resume Screening (NEW!)
+
+- **Intelligent Resume Analysis** - Upload resumes and get AI-powered candidate evaluation
+- **Skill Matching** - Automatic skill extraction and job requirement matching
+- **Hiring Recommendations** - AI-generated hire/interview/reject recommendations with confidence scores
+- **Detailed Candidate Profiles** - Structured extraction of experience, education, and certifications
+- **Multi-format Support** - PDF, DOC, and DOCX resume parsing
+
 ### For Job Seekers
 
 - 🤖 **AI-Powered Job Matching** - Get personalized job recommendations based on your skills and experience
@@ -27,6 +35,7 @@ Seeker Nexus AI is a modern, AI-powered job portal that revolutionizes the way j
 
 ### For Employers
 
+- 🧠 **AI Resume Screening** - Upload and analyze candidate resumes with AI-powered insights
 - 📢 **Job Posting** - Easy-to-use interface for posting job opportunities
 - 👥 **Candidate Management** - View and manage job applications efficiently
 - 🏢 **Company Profiles** - Showcase your company to attract top talent
@@ -34,16 +43,22 @@ Seeker Nexus AI is a modern, AI-powered job portal that revolutionizes the way j
 
 ## 🛠️ Technology Stack
 
-- **Frontend Framework**: React 18.3 with TypeScript
+### Frontend
+- **Framework**: React 18.3 with TypeScript
 - **Build Tool**: Vite 5.4
 - **Styling**: Tailwind CSS + shadcn/ui components
-- **Backend & Database**: Supabase (PostgreSQL)
 - **State Management**: TanStack Query (React Query)
 - **Routing**: React Router v6
 - **Form Handling**: React Hook Form + Zod validation
 - **UI Components**: Radix UI primitives
 - **Icons**: Lucide React
 - **Charts**: Recharts
+
+### Backend Integration
+- **AI Resume Screening API**: Python FastAPI with LangGraph agents
+- **Database**: Supabase (PostgreSQL)
+- **File Upload**: Multi-format resume parsing (PDF, DOC, DOCX)
+- **AI Models**: OpenAI GPT-4, OpenRouter, or Ollama support
 
 ## 🚀 Getting Started
 
@@ -70,24 +85,34 @@ Seeker Nexus AI is a modern, AI-powered job portal that revolutionizes the way j
 
 3. **Set up environment variables**
    
-   Create a `.env` file in the root directory with your Supabase credentials:
+   Create a `.env` file in the root directory:
    ```env
+   # Supabase Configuration
    VITE_SUPABASE_URL=your_supabase_project_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_anon_key
+   
+   # Backend API Configuration
+   VITE_API_BASE_URL=http://localhost:8000
    ```
 
 4. **Run database migrations**
    
    Use the Supabase CLI or dashboard to run the migrations in `supabase/migrations/`
 
-5. **Start the development server**
+5. **Start the backend server** (for AI Resume Screening)
+   ```bash
+   cd ../Backend
+   python main.py
+   ```
+
+6. **Start the frontend development server**
    ```bash
    npm run dev
    # or
    bun dev
    ```
 
-6. **Open your browser**
+7. **Open your browser**
    
    Navigate to `http://localhost:5173` (or the port shown in your terminal)
 
@@ -112,23 +137,30 @@ For testing purposes, you can create demo accounts or refer to `DEMO_CREDENTIALS
 - `/jobs` - Browse all job listings
 - `/jobs/:id` - Individual job details and application
 - `/dashboard` - User dashboard (Job Seeker or Employer view)
+- `/resume-screening` - **NEW!** AI-powered resume screening interface
+- `/test-backend` - Backend API connectivity testing
 - `/chat` - AI Career Assistant chat interface
 - `/about` - About the platform
 
 ## 📁 Project Structure
 
 ```
-seeker-nexus-ai/
+Frontend/
 ├── src/
 │   ├── components/       # Reusable UI components
 │   │   ├── ui/          # shadcn/ui components
 │   │   ├── dashboard/   # Dashboard-specific components
+│   │   ├── ResumeScreening.tsx  # AI resume screening component
+│   │   ├── BackendStatus.tsx    # Backend connectivity status
 │   │   └── Navbar.tsx   # Navigation component
 │   ├── pages/           # Page components (routes)
+│   │   ├── ResumeScreening.tsx  # AI screening page
+│   │   └── TestBackend.tsx      # Backend testing page
 │   ├── integrations/    # External service integrations
 │   │   └── supabase/    # Supabase client and types
 │   ├── hooks/           # Custom React hooks
 │   ├── lib/             # Utility functions
+│   │   └── api.ts       # Backend API integration
 │   └── assets/          # Static assets
 ├── supabase/
 │   ├── migrations/      # Database migrations
@@ -136,6 +168,34 @@ seeker-nexus-ai/
 ├── public/              # Public static files
 └── ...config files
 ```
+
+## 🧠 AI Resume Screening Features
+
+### How It Works
+
+1. **Upload Resume**: Drag and drop PDF, DOC, or DOCX files
+2. **Job Details**: Enter job title, description, and required skills
+3. **AI Analysis**: Backend processes resume using LangGraph agents
+4. **Results**: Get detailed candidate profile and hiring recommendation
+
+### What You Get
+
+- **Candidate Profile**: Extracted name, contact, skills, experience, education
+- **Decision Output**: 
+  - Confidence score (0-100%)
+  - Recommendation (hire/interview/reject)
+  - Skill match percentage
+  - Advantages and disadvantages
+  - Experience level assessment
+  - Comprehensive summary
+
+### Backend Integration
+
+The frontend connects to a Python FastAPI backend that uses:
+- **LangGraph**: Multi-agent workflow orchestration
+- **LangChain**: LLM application framework
+- **Multiple LLM Support**: OpenAI GPT-4, OpenRouter, or Ollama
+- **Document Parsing**: PyPDF2 and python-docx for file processing
 
 ## 🔧 Available Scripts
 
