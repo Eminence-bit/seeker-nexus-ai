@@ -42,6 +42,9 @@ const Navbar = () => {
           <Link to="/jobs" className="text-sm font-medium hover:text-primary transition-colors">
             Find Jobs
           </Link>
+          <Link to="/resume-screening" className="text-sm font-medium hover:text-primary transition-colors">
+            AI Screening
+          </Link>
           {user && (
             <Link to="/dashboard" className="text-sm font-medium hover:text-primary transition-colors">
               Dashboard

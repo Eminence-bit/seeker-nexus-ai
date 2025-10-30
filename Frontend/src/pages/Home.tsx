@@ -111,6 +111,43 @@ const Home = () => {
         </div>
       </section>
 
+      {/* AI Resume Screening CTA */}
+      <section className="container py-20">
+        <Card className="overflow-hidden border-2 shadow-[var(--shadow-elegant)]">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="p-8 md:p-12 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                AI-Powered Resume Screening
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Upload resumes and job descriptions to get instant AI analysis with candidate 
+                profiles, skill matching, and hiring recommendations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/resume-screening">
+                  <Button variant="hero" size="lg">
+                    <Sparkles className="mr-2 h-5 w-5" />
+                    Try AI Screening
+                  </Button>
+                </Link>
+                <Link to="/auth?mode=signup">
+                  <Button variant="outline" size="lg">
+                    Get Started Free
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="relative h-64 md:h-full min-h-[300px]">
+              <img
+                src={aiAssistantIcon}
+                alt="AI Resume Screening"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </Card>
+      </section>
+
       {/* AI Assistant CTA */}
       <section className="container py-20">
         <Card className="overflow-hidden border-2 shadow-[var(--shadow-elegant)]">

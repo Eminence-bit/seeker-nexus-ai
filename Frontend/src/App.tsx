@@ -10,6 +10,8 @@ import JobDetails from "./pages/JobDetails";
 import Dashboard from "./pages/Dashboard";
 import Chat from "./pages/Chat";
 import About from "./pages/About";
+import ResumeScreening from "./pages/ResumeScreening";
+import TestBackend from "./pages/TestBackend";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/about" element={<About />} />
+          <Route path="/resume-screening" element={<ResumeScreening />} />
+          <Route path="/test-backend" element={<TestBackend />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

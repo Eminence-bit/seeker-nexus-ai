@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { 
-  Briefcase, Users, Eye, Plus, 
+  Briefcase, Users, Eye, Plus, Brain,
   MapPin, Clock, DollarSign 
 } from "lucide-react";
 
@@ -143,10 +143,18 @@ const EmployerDashboard = ({ userId }: EmployerDashboardProps) => {
             Manage your job postings and review applicants
           </p>
         </div>
-        <Button variant="hero" size="lg">
-          <Plus className="mr-2 h-5 w-5" />
-          Post New Job
-        </Button>
+        <div className="flex gap-3">
+          <Link to="/resume-screening">
+            <Button variant="outline" size="lg">
+              <Brain className="mr-2 h-5 w-5" />
+              AI Screening
+            </Button>
+          </Link>
+          <Button variant="hero" size="lg">
+            <Plus className="mr-2 h-5 w-5" />
+            Post New Job
+          </Button>
+        </div>
       </div>
 
       {/* Stats Cards */}
