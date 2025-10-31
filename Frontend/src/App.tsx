@@ -12,6 +12,7 @@ import Chat from "./pages/Chat";
 import About from "./pages/About";
 import ResumeScreening from "./pages/ResumeScreening";
 import TestBackend from "./pages/TestBackend";
+import PostJob from "./pages/PostJob";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/resume-screening" element={<ResumeScreening />} />
           <Route path="/test-backend" element={<TestBackend />} />
+          <Route path="/post-job" element={<PostJob />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

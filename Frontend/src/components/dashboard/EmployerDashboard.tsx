@@ -150,10 +150,12 @@ const EmployerDashboard = ({ userId }: EmployerDashboardProps) => {
               AI Screening
             </Button>
           </Link>
-          <Button variant="hero" size="lg">
-            <Plus className="mr-2 h-5 w-5" />
-            Post New Job
-          </Button>
+          <Link to="/post-job">
+            <Button variant="hero" size="lg">
+              <Plus className="mr-2 h-5 w-5" />
+              Post New Job
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -237,10 +239,12 @@ const EmployerDashboard = ({ userId }: EmployerDashboardProps) => {
                 <p className="text-muted-foreground mb-4">
                   Create your first job posting to start receiving applications
                 </p>
-                <Button variant="hero">
-                  <Plus className="mr-2 h-4 w-4" />
-                  Post Your First Job
-                </Button>
+                <Link to="/post-job">
+                  <Button variant="hero">
+                    <Plus className="mr-2 h-4 w-4" />
+                    Post Your First Job
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ) : (
